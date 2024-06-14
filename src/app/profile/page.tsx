@@ -19,9 +19,9 @@ export default function ProfilePage() {
   const router = useRouter();
   const [data, setData] = useState("nothing");
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const dropdownRef = useRef(null);
 
   const logout = async () => {
     try {
@@ -41,19 +41,19 @@ export default function ProfilePage() {
     setData(res.data.data._id);
   };
 
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
+  // const handleDropdownToggle = () => {
+  //   setIsDropdownOpen((prev) => !prev);
+  // };
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  // const handleMenuToggle = () => {
+  //   setIsMenuOpen((prev) => !prev);
+  // };
 
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
-  };
+  // const handleClickOutside = (event) => {
+  //   if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //     setIsDropdownOpen(false);
+  //   }
+  // };
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -72,42 +72,12 @@ export default function ProfilePage() {
       width={800}
       height={300}
     />      </div>
-      <div className="hamburger" onClick={handleMenuToggle}>
-        &#9776;
-      </div>
-      <div className={`Nav-menu ${isMenuOpen ? "show" : ""}`}>
+      
+      <div className="Nav-menu">
         <Link className="Navlink" href="/">
           Home
         </Link>
-        <div
-          className="Navlink1"
-          onClick={handleDropdownToggle}
-          ref={dropdownRef}
-        >
-          Product
-          {isDropdownOpen && (
-            <div className="dropdown">
-              <Link className="dropdown-link" href="">
-                Men
-              </Link>
-              <Link className="dropdown-link" href="">
-                Women
-              </Link>
-              <Link className="dropdown-link" href="">
-                Shoes
-              </Link>
-              <Link className="dropdown-link" href="">
-                Electronics
-              </Link>
-              <Link className="dropdown-link" href="">
-                Accessories
-              </Link>
-              <Link className="dropdown-link" href="">
-                Home Decor
-              </Link>
-            </div>
-          )}
-        </div>
+        
         <Link className="Navlink" href="/order">
           Orders
         </Link>
