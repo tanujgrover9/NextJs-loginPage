@@ -1,0 +1,44 @@
+
+.login-div{
+    
+    background-image:url("../../img/alex-shutin-kKvQJ6rK6S4-unsplash\ \(2\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+.login-div h1{
+    font-size: 50px;
+    font-weight: bold;
+
+}
+.login-div input{
+    padding: 20px 70px;
+    border-radius: 40px;
+    font-size: 25px;
+    border: none;
+    color: black;
+    background-color: rgba(246, 246, 249, 0.959);
+
+}
+.login-div #email{
+    color: #000;
+}
+.login-div label{
+    font-size: 20px;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login-div button{
+    padding: 20px 70px;
+    background-color: blue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 60px;
+    border: none;
+}
+.signup-div Link{
+    color: blue;
+}
